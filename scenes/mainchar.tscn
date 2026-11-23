@@ -14,24 +14,24 @@ region = Rect2(25, 2, 22, 18)
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_pk7x4"]
 load_path = "res://.godot/imported/pixil-frame-0(3).png-b6e5fc6f3d26890a54275ccf136dfe8c.ctex"
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_yjal4"]
-atlas = SubResource("CompressedTexture2D_pk7x4")
-region = Rect2(3, 2, 22, 18)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_ntrku"]
 atlas = SubResource("CompressedTexture2D_pk7x4")
 region = Rect2(25, 2, 22, 18)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_yjal4"]
+atlas = SubResource("CompressedTexture2D_pk7x4")
+region = Rect2(3, 2, 22, 18)
+
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_362dq"]
 load_path = "res://.godot/imported/pixil-frame-0(2).png-eb32cbaaa4a38f0559b8d1159aee866f.ctex"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4j60f"]
-atlas = SubResource("CompressedTexture2D_362dq")
-region = Rect2(3, 2, 22, 18)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_17n50"]
 atlas = SubResource("CompressedTexture2D_362dq")
 region = Rect2(25, 2, 22, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4j60f"]
+atlas = SubResource("CompressedTexture2D_362dq")
+region = Rect2(3, 2, 22, 18)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fm6ed"]
 animations = [{
@@ -48,10 +48,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_yjal4")
+"texture": SubResource("AtlasTexture_ntrku")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ntrku")
+"texture": SubResource("AtlasTexture_yjal4")
 }],
 "loop": 2,
 "name": &"jump",
@@ -59,10 +59,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_4j60f")
+"texture": SubResource("AtlasTexture_17n50")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_17n50")
+"texture": SubResource("AtlasTexture_4j60f")
 }],
 "loop": 1,
 "name": &"run",
@@ -79,9 +79,9 @@ texture_filter = 1
 position = Vector2(289, 189)
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_fm6ed")
-animation = &"run"
+animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.35538486
+frame_progress = 0.41506216
 centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2030082229]

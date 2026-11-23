@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bs1duilmnnqup" path="res://Terrain (16x16).png" id="2_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://bm1ebwkanjpsx" path="res://scenes/mainchar.tscn" id="3_lquwl"]
 [ext_resource type="Script" uid="uid://cggittallmt6x" path="res://scenes/mainchar.gd" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://sbbwvl4o6x40" path="res://scenes/collectible.tscn" id="5_lquwl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mycd"]
 texture = ExtResource("2_1bvp3")
@@ -176,11 +177,8 @@ sources/0 = SubResource("TileSetAtlasSource_7mycd")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1755043134]
 texture_filter = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_right = 1153.0
+offset_bottom = 649.0
 texture = ExtResource("1_h2yge")
 stretch_mode = 1
 
@@ -195,3 +193,24 @@ layer_0/tile_data = PackedInt32Array(65535, 393216, 0, 393216, 458752, 0, 458752
 [node name="CharacterBody2D" parent="." unique_id=54317563 instance=ExtResource("3_lquwl")]
 position = Vector2(-148, 364)
 script = ExtResource("4_1bvp3")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1258636100]
+position = Vector2(324, 217)
+
+[node name="Area2D" parent="." unique_id=1500541393 instance=ExtResource("5_lquwl")]
+position = Vector2(996, 135)
+
+[node name="Area2D2" parent="." unique_id=2134530943 instance=ExtResource("5_lquwl")]
+position = Vector2(529, 129)
+
+[node name="Area2D3" parent="." unique_id=1524414637 instance=ExtResource("5_lquwl")]
+position = Vector2(45, 213)
+
+[node name="Area2D4" parent="." unique_id=487733006 instance=ExtResource("5_lquwl")]
+position = Vector2(1090, 403)
+
+[node name="Area2D5" parent="." unique_id=1813798922 instance=ExtResource("5_lquwl")]
+position = Vector2(273, 375)
+
+[node name="Area2D6" parent="." unique_id=556870673 instance=ExtResource("5_lquwl")]
+position = Vector2(695, 490)
