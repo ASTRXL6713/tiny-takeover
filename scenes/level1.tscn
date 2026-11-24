@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://dc1n41pljjwk5" path="res://progress_holder.gd" id="6_2ku1j"]
 [ext_resource type="PackedScene" uid="uid://hdr3vbc3pbv1" path="res://scenes/finish.tscn" id="7_f31uk"]
 [ext_resource type="PackedScene" uid="uid://cjxqq53h3w8q0" path="res://scenes/level2.tscn" id="8_bbk5w"]
+[ext_resource type="Texture2D" uid="uid://bfvg6fbexw1d3" path="res://scenes/pixil-frame-0(6).png" id="9_conm7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mycd"]
 texture = ExtResource("2_bbk5w")
@@ -273,3 +274,37 @@ theme_override_font_sizes/font_size = 27
 text = "points: 0"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="hearts" type="Panel" parent="menu" unique_id=2082380932]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -169.0
+offset_top = 18.0
+offset_right = -17.0
+offset_bottom = 75.0
+grow_horizontal = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="menu/hearts" unique_id=1136429849]
+layout_mode = 0
+offset_right = 152.0
+offset_bottom = 47.0
+alignment = 1
+
+[node name="heart" type="TextureRect" parent="menu/hearts/HBoxContainer" unique_id=904555073]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("9_conm7")
+expand_mode = 2
+
+[node name="heart2" type="TextureRect" parent="menu/hearts/HBoxContainer" unique_id=1172962914]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("9_conm7")
+expand_mode = 2
+
+[node name="heart3" type="TextureRect" parent="menu/hearts/HBoxContainer" unique_id=290169402]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("9_conm7")
+expand_mode = 2
