@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://davl03qymwvpw"]
+
+[ext_resource type="Texture2D" uid="uid://k7650g1ol342" path="res://scenes/cooltext519712941993505.png" id="1_rk22q"]
+
+[node name="MainMenu" type="Node" unique_id=1484338700]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1225533939]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_rk22q")
