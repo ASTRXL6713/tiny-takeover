@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://hdr3vbc3pbv1" path="res://scenes/finish.tscn" id="7_f31uk"]
 [ext_resource type="PackedScene" uid="uid://cjxqq53h3w8q0" path="res://scenes/level2.tscn" id="8_bbk5w"]
 [ext_resource type="Texture2D" uid="uid://bfvg6fbexw1d3" path="res://scenes/pixil-frame-0(6).png" id="9_conm7"]
+[ext_resource type="PackedScene" uid="uid://b72x3ca0t4c81" path="res://scenes/enemy.tscn" id="10_d3jkd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mycd"]
 texture = ExtResource("2_bbk5w")
@@ -308,3 +309,7 @@ texture_filter = 1
 layout_mode = 2
 texture = ExtResource("9_conm7")
 expand_mode = 2
+
+[node name="enemy" parent="." unique_id=1426759832 instance=ExtResource("10_d3jkd")]
+position = Vector2(572, 485)
+scale = Vector2(3, 3)
