@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://k7650g1ol342"
-path="res://.godot/imported/cooltext519712941993505.png-7b01f206b718423bb79a954cbbc6bdf9.ctex"
+uid="uid://bbw6pxpbs417l"
+path="res://.godot/imported/Strawberry.png-7ae9b0bab81060608586debeb7bee8a1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/cooltext519712941993505.png"
-dest_files=["res://.godot/imported/cooltext519712941993505.png-7b01f206b718423bb79a954cbbc6bdf9.ctex"]
+source_file="res://assets or idk/Strawberry.png"
+dest_files=["res://.godot/imported/Strawberry.png-7ae9b0bab81060608586debeb7bee8a1.ctex"]
 
 [params]
 

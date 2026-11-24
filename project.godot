@@ -13,7 +13,7 @@ config_version=5
 config/name="tiny takeover"
 run/main_scene="uid://davl03qymwvpw"
 config/features=PackedStringArray("4.7", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://assets or idk/icon.svg"
 
 [display]
 

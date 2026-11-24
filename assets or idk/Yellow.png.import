@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgrfmxaxltw2a"
-path="res://.godot/imported/beetle-32px_strip8.png-53b22047a6adf5efb5b5769d2668a5d7.ctex"
+uid="uid://b37tk6116p6nu"
+path="res://.godot/imported/Yellow.png-5b19099acb0fd8e6dd230a186b3412b5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/beetle-32px_strip8.png"
-dest_files=["res://.godot/imported/beetle-32px_strip8.png-53b22047a6adf5efb5b5769d2668a5d7.ctex"]
+source_file="res://assets or idk/Yellow.png"
+dest_files=["res://.godot/imported/Yellow.png-5b19099acb0fd8e6dd230a186b3412b5.ctex"]
 
 [params]
 

@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://davl03qymwvpw"]
 
 [ext_resource type="Script" uid="uid://gjgdnlracnwg" path="res://scenes/main_menu.gd" id="1_hf3n6"]
-[ext_resource type="Texture2D" uid="uid://k7650g1ol342" path="res://scenes/cooltext519712941993505.png" id="1_rk22q"]
-[ext_resource type="Texture2D" uid="uid://25d37hog5lu6" path="res://scenes/Blue.png" id="2_xg1py"]
+[ext_resource type="Texture2D" uid="uid://25d37hog5lu6" path="res://assets or idk/Blue.png" id="2_hf3n6"]
+[ext_resource type="Texture2D" uid="uid://k7650g1ol342" path="res://assets or idk/cooltext519712941993505.png" id="3_xg1py"]
 
 [node name="MainMenu" type="Node" unique_id=1484338700]
 script = ExtResource("1_hf3n6")
@@ -11,7 +11,7 @@ script = ExtResource("1_hf3n6")
 texture_filter = 1
 offset_right = 1152.0
 offset_bottom = 644.0
-texture = ExtResource("2_xg1py")
+texture = ExtResource("2_hf3n6")
 stretch_mode = 1
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1225533939]
@@ -23,7 +23,7 @@ offset_top = 129.0
 offset_right = 447.0
 offset_bottom = 243.0
 grow_horizontal = 2
-texture = ExtResource("1_rk22q")
+texture = ExtResource("3_xg1py")
 stretch_mode = 1
 
 [node name="level1btn" type="Button" parent="." unique_id=1113177854]

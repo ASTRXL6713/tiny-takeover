@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bs1duilmnnqup"
-path="res://.godot/imported/Terrain (16x16).png-f072e8a5f99e915c05031c83401c87a9.ctex"
+path="res://.godot/imported/Terrain (16x16).png-6d9ba3e3f27fcae12af4e6db8d1d3249.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Terrain (16x16).png"
-dest_files=["res://.godot/imported/Terrain (16x16).png-f072e8a5f99e915c05031c83401c87a9.ctex"]
+source_file="res://assets or idk/Terrain (16x16).png"
+dest_files=["res://.godot/imported/Terrain (16x16).png-6d9ba3e3f27fcae12af4e6db8d1d3249.ctex"]
 
 [params]
 

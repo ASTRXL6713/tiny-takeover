@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfvg6fbexw1d3"
-path="res://.godot/imported/pixil-frame-0(6).png-bf85a7da74ccb428aecd2e28c1cf6f26.ctex"
+uid="uid://duau2lf3qcvk4"
+path="res://.godot/imported/icon.svg-15c13f5bbcd55b01a88911a28dc74440.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/pixil-frame-0(6).png"
-dest_files=["res://.godot/imported/pixil-frame-0(6).png-bf85a7da74ccb428aecd2e28c1cf6f26.ctex"]
+source_file="res://assets or idk/icon.svg"
+dest_files=["res://.godot/imported/icon.svg-15c13f5bbcd55b01a88911a28dc74440.ctex"]
 
 [params]
 
@@ -38,3 +38,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

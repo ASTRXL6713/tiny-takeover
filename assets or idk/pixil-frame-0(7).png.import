@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbw6pxpbs417l"
-path="res://.godot/imported/Strawberry.png-367d219d70f2f52d364729a982ad2082.ctex"
+uid="uid://o8ic7qkokrcl"
+path="res://.godot/imported/pixil-frame-0(7).png-8d4b605ee30c384a0b2fa66e8752750e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/Strawberry.png"
-dest_files=["res://.godot/imported/Strawberry.png-367d219d70f2f52d364729a982ad2082.ctex"]
+source_file="res://assets or idk/pixil-frame-0(7).png"
+dest_files=["res://.godot/imported/pixil-frame-0(7).png-8d4b605ee30c384a0b2fa66e8752750e.ctex"]
 
 [params]
 
