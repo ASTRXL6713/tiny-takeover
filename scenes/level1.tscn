@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://sbbwvl4o6x40" path="res://scenes/collectible.tscn" id="5_u3awl"]
 [ext_resource type="Script" uid="uid://dc1n41pljjwk5" path="res://progress_holder.gd" id="6_2ku1j"]
 [ext_resource type="PackedScene" uid="uid://hdr3vbc3pbv1" path="res://scenes/finish.tscn" id="7_f31uk"]
+[ext_resource type="PackedScene" uid="uid://cjxqq53h3w8q0" path="res://scenes/level2.tscn" id="8_bbk5w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mycd"]
 texture = ExtResource("2_bbk5w")
@@ -248,9 +249,10 @@ position = Vector2(3029, 206)
 unique_name_in_owner = true
 script = ExtResource("6_2ku1j")
 
-[node name="Area2D" parent="." unique_id=1695219440 instance=ExtResource("7_f31uk")]
-position = Vector2(3301, 575)
-scale = Vector2(1.5, 1.5)
+[node name="finish" parent="." unique_id=1695219440 instance=ExtResource("7_f31uk")]
+position = Vector2(3302.0002, 549)
+scale = Vector2(2.335, 2.335)
+target_level = ExtResource("8_bbk5w")
 
 [node name="menu" type="CanvasLayer" parent="." unique_id=1927867516]
 

@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://cggittallmt6x" path="res://scenes/mainchar.gd" id="4_jifot"]
 [ext_resource type="PackedScene" uid="uid://sbbwvl4o6x40" path="res://scenes/collectible.tscn" id="5_3opl0"]
 [ext_resource type="Script" uid="uid://dc1n41pljjwk5" path="res://progress_holder.gd" id="6_dc5vx"]
+[ext_resource type="PackedScene" uid="uid://davl03qymwvpw" path="res://scenes/main-menu.tscn" id="6_hrcei"]
 [ext_resource type="PackedScene" uid="uid://hdr3vbc3pbv1" path="res://scenes/finish.tscn" id="7_s8oj7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mycd"]
@@ -233,8 +234,9 @@ position = Vector2(324, 217)
 [node name="collectibles" type="Node" parent="sceneobj" unique_id=1013158257]
 
 [node name="Area2D" parent="sceneobj/collectibles" unique_id=1695219440 instance=ExtResource("7_s8oj7")]
-position = Vector2(3114.0002, 573)
-scale = Vector2(1.5, 1.5)
+position = Vector2(3113.0002, 551)
+scale = Vector2(2.205, 2.205)
+target_level = ExtResource("6_hrcei")
 
 [node name="Area2D2" parent="sceneobj/collectibles" unique_id=1500541393 instance=ExtResource("5_3opl0")]
 position = Vector2(437, 133)
