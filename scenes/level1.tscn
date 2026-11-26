@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cjxqq53h3w8q0" path="res://scenes/level2.tscn" id="8_bbk5w"]
 [ext_resource type="Texture2D" uid="uid://bfvg6fbexw1d3" path="res://assets or idk/pixil-frame-0(6).png" id="9_conm7"]
 [ext_resource type="PackedScene" uid="uid://b72x3ca0t4c81" path="res://scenes/enemy.tscn" id="10_d3jkd"]
+[ext_resource type="Script" uid="uid://dmiu2ljtimq56" path="res://scenes/pause.gd" id="11_2ku1j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mycd"]
 texture = ExtResource("2_bbk5w")
@@ -189,6 +190,27 @@ sources/0 = SubResource("TileSetAtlasSource_7mycd")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_wsldw"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_34i2c"]
+content_margin_left = 35.0
+content_margin_top = 5.0
+content_margin_right = 35.0
+content_margin_bottom = 5.0
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2ku1j"]
+content_margin_left = 35.0
+content_margin_top = 5.0
+content_margin_right = 35.0
+content_margin_bottom = 5.0
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
 [node name="Node" type="Node" unique_id=2064799158]
 
 [node name="progress holder" type="Node" parent="." unique_id=1374060903]
@@ -321,10 +343,64 @@ texture = ExtResource("9_conm7")
 expand_mode = 2
 
 [node name="pause" type="Node" parent="menu" unique_id=518251536]
+script = ExtResource("11_2ku1j")
 
 [node name="pausepanel" type="Panel" parent="menu/pause" unique_id=1661944755]
-offset_right = 40.0
-offset_bottom = 40.0
+unique_name_in_owner = true
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="menu/pause/pausepanel" unique_id=1727430243]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -200.5
+offset_top = -282.0
+offset_right = 200.5
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 21
+
+[node name="continue" type="Button" parent="menu/pause/pausepanel/VBoxContainer" unique_id=616831393]
+process_mode = 3
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_34i2c")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2ku1j")
+text = "continue"
+
+[node name="main menu" type="Button" parent="menu/pause/pausepanel/VBoxContainer" unique_id=794101600]
+process_mode = 3
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_34i2c")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2ku1j")
+text = "main menu"
+
+[node name="Label" type="Label" parent="menu/pause/pausepanel" unique_id=2121343198]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -350.0
+offset_top = -156.0
+offset_right = 349.0
+offset_bottom = -19.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 100
+text = "GAME PAUSED"
+horizontal_alignment = 1
 
 [node name="enemy2" parent="." unique_id=316295464 instance=ExtResource("10_d3jkd")]
 position = Vector2(538, 253)
@@ -336,3 +412,5 @@ position = Vector2(1162, 159)
 position = Vector2(2866, 622)
 
 [connection signal="body_entered" from="sceneobj/Area2D" to="sceneobj/Area2D" method="_on_body_entered"]
+[connection signal="pressed" from="menu/pause/pausepanel/VBoxContainer/continue" to="menu/pause" method="_on_continue_pressed"]
+[connection signal="pressed" from="menu/pause/pausepanel/VBoxContainer/main menu" to="menu/pause" method="_on_main_menu_pressed"]
