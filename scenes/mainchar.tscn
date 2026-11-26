@@ -73,10 +73,11 @@ animations = [{
 size = Vector2(60.5, 72)
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=54317563]
+texture_filter = 1
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=600637338]
 texture_filter = 1
-position = Vector2(289, 189)
+position = Vector2(-35, -68)
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_fm6ed")
 animation = &"idle"
@@ -85,5 +86,5 @@ frame_progress = 0.41506216
 centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2030082229]
-position = Vector2(318.75, 225)
+position = Vector2(-5.25, -32)
 shape = SubResource("RectangleShape2D_34i2c")

@@ -140,10 +140,11 @@ script = ExtResource("1_1pg6c")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=419437341]
 texture_filter = 1
+position = Vector2(-0.28571427, -7.4285707)
 shape = SubResource("CircleShape2D_34i2c")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1670691426]
-position = Vector2(-0.28571427, 0)
+position = Vector2(-0.57142854, -7.4285707)
 sprite_frames = SubResource("SpriteFrames_34i2c")
 autoplay = "default"
 
