@@ -213,9 +213,10 @@ corner_radius_bottom_left = 25
 
 [node name="Node" type="Node" unique_id=2064799158]
 
-[node name="progress holder" type="Node" parent="." unique_id=1374060903]
+[node name="progress holder" type="Node" parent="." unique_id=1374060903 node_paths=PackedStringArray("hearts")]
 unique_name_in_owner = true
 script = ExtResource("6_2ku1j")
+hearts = [NodePath("../menu/hearts/HBoxContainer/heart"), NodePath("../menu/hearts/HBoxContainer/heart2"), NodePath("../menu/hearts/HBoxContainer/heart3")]
 
 [node name="sceneobj" type="Node" parent="." unique_id=811639860]
 

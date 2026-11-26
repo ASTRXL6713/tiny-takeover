@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://davl03qymwvpw" path="res://scenes/main-menu.tscn" id="6_hrcei"]
 [ext_resource type="PackedScene" uid="uid://hdr3vbc3pbv1" path="res://scenes/finish.tscn" id="7_s8oj7"]
 [ext_resource type="Script" uid="uid://dhh43jtiuku6x" path="res://scenes/area_2d.gd" id="8_xa7n4"]
+[ext_resource type="Script" uid="uid://dmiu2ljtimq56" path="res://scenes/pause.gd" id="10_bo4dx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mycd"]
 texture = ExtResource("2_rmy57")
@@ -209,6 +210,26 @@ sources/0 = SubResource("TileSetAtlasSource_7mycd")
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_34i2c"]
 distance = -101.71428
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_76toy"]
+content_margin_left = 35.0
+content_margin_top = 5.0
+content_margin_right = 35.0
+content_margin_bottom = 5.0
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8g4ke"]
+content_margin_left = 35.0
+content_margin_top = 5.0
+content_margin_right = 35.0
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
 [node name="Node2" type="Node" unique_id=2064799158]
 
 [node name="sceneobj" type="Node" parent="." unique_id=811639860]
@@ -303,4 +324,66 @@ text = "points: 0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="pause" type="Node" parent="menu" unique_id=150357894]
+script = ExtResource("10_bo4dx")
+
+[node name="pausepanel" type="Panel" parent="menu/pause" unique_id=1680994442]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="menu/pause/pausepanel" unique_id=966339726]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -200.5
+offset_top = -282.0
+offset_right = 200.5
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 21
+
+[node name="continue" type="Button" parent="menu/pause/pausepanel/VBoxContainer" unique_id=1507743239]
+process_mode = 3
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_76toy")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8g4ke")
+text = "continue"
+
+[node name="main menu" type="Button" parent="menu/pause/pausepanel/VBoxContainer" unique_id=1670122032]
+process_mode = 3
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_76toy")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8g4ke")
+text = "main menu"
+
+[node name="Label" type="Label" parent="menu/pause/pausepanel" unique_id=788770024]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -350.0
+offset_top = -156.0
+offset_right = 349.0
+offset_bottom = -19.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 100
+text = "GAME PAUSED"
+horizontal_alignment = 1
+
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="pressed" from="menu/pause/pausepanel/VBoxContainer/continue" to="menu/pause" method="_on_continue_pressed"]
+[connection signal="pressed" from="menu/pause/pausepanel/VBoxContainer/main menu" to="menu/pause" method="_on_main_menu_pressed"]

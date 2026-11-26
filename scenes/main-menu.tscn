@@ -4,6 +4,28 @@
 [ext_resource type="Texture2D" uid="uid://25d37hog5lu6" path="res://assets or idk/Blue.png" id="2_hf3n6"]
 [ext_resource type="Texture2D" uid="uid://k7650g1ol342" path="res://assets or idk/cooltext519712941993505.png" id="3_xg1py"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2ku1j"]
+content_margin_left = 35.0
+content_margin_top = 5.0
+content_margin_right = 35.0
+content_margin_bottom = 5.0
+bg_color = Color(0, 0, 0, 0.79607844)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f31uk"]
+content_margin_left = 35.0
+content_margin_top = 5.0
+content_margin_right = 35.0
+content_margin_bottom = 5.0
+bg_color = Color(0.6, 0.6, 0.6, 0.79607844)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
 [node name="MainMenu" type="Node" unique_id=1484338700]
 script = ExtResource("1_hf3n6")
 
@@ -40,6 +62,8 @@ offset_bottom = 81.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_2ku1j")
+theme_override_styles/hover = SubResource("StyleBoxFlat_f31uk")
 text = "level 1"
 
 [node name="level2btn" type="Button" parent="." unique_id=12273946]
@@ -56,6 +80,8 @@ offset_bottom = 82.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_2ku1j")
+theme_override_styles/hover = SubResource("StyleBoxFlat_f31uk")
 text = "level 2"
 
 [connection signal="pressed" from="level1btn" to="." method="_on_level_1_btn_pressed"]

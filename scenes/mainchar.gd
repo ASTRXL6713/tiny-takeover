@@ -37,3 +37,7 @@ func _physics_process(delta: float) -> void:
 	
 func jump():
 	velocity.y = JUMP_VELOCITY
+func jump_side(x):
+	velocity.y = JUMP_VELOCITY
+	velocity.x = x
+	
