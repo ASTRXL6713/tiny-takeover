@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://gjgdnlracnwg" path="res://scenes/main_menu.gd" id="1_hf3n6"]
 [ext_resource type="Texture2D" uid="uid://25d37hog5lu6" path="res://assets or idk/Blue.png" id="2_hf3n6"]
 [ext_resource type="Texture2D" uid="uid://k7650g1ol342" path="res://assets or idk/cooltext519712941993505.png" id="3_xg1py"]
+[ext_resource type="Texture2D" uid="uid://cf1mq6mvm834m" path="res://assets or idk/pixil-frame-0.png" id="4_xg1py"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2ku1j"]
 content_margin_left = 35.0
@@ -16,6 +17,28 @@ corner_radius_bottom_right = 25
 corner_radius_bottom_left = 25
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f31uk"]
+content_margin_left = 35.0
+content_margin_top = 5.0
+content_margin_right = 35.0
+content_margin_bottom = 5.0
+bg_color = Color(0.6, 0.6, 0.6, 0.79607844)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_34i2c"]
+content_margin_left = 35.0
+content_margin_top = 5.0
+content_margin_right = 35.0
+content_margin_bottom = 5.0
+bg_color = Color(0, 0, 0, 0.79607844)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eusmj"]
 content_margin_left = 35.0
 content_margin_top = 5.0
 content_margin_right = 35.0
@@ -84,5 +107,77 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_2ku1j")
 theme_override_styles/hover = SubResource("StyleBoxFlat_f31uk")
 text = "level 2"
 
+[node name="readme" type="Button" parent="." unique_id=1744135763]
+offset_left = 765.0
+offset_top = 318.0
+offset_right = 1002.0
+offset_bottom = 407.0
+theme_override_font_sizes/font_size = 37
+theme_override_styles/normal = SubResource("StyleBoxFlat_34i2c")
+theme_override_styles/hover = SubResource("StyleBoxFlat_eusmj")
+text = "READ ME"
+
+[node name="readmepage" type="TextureRect" parent="." unique_id=50275128]
+visible = false
+texture_filter = 1
+offset_right = 1152.0
+offset_bottom = 644.0
+texture = ExtResource("2_hf3n6")
+stretch_mode = 1
+
+[node name="readmemainmenu" type="Button" parent="readmepage" unique_id=1907051638]
+layout_mode = 0
+offset_left = 854.0
+offset_top = 10.0
+offset_right = 1144.0
+offset_bottom = 103.0
+theme_override_font_sizes/font_size = 37
+theme_override_styles/normal = SubResource("StyleBoxFlat_34i2c")
+theme_override_styles/hover = SubResource("StyleBoxFlat_eusmj")
+text = "MAIN MENU"
+
+[node name="title" type="Label" parent="readmepage" unique_id=1742116332]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 68
+text = "info about the game"
+
+[node name="text" type="Label" parent="readmepage" unique_id=1148152968]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 149.0
+offset_right = 985.0
+offset_bottom = 644.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "your controlls are a to go left d to go right space/w to jump
+what you do have:
+-double jump
+what your goals should be:
+-collect all the strawberrys
+-defeat all the bugs 
+disclaimer:
+-all of the strawberrys are reachable one way or another
+there are some jump/strawberrys that are ridiculously hard to get(for the pro players)
+
+
+
+
+p.s. some strawberrys need you to jump on bugs and perform a \"triple jump\" as the bugs make you jump when you jump on top of them :)"
+autowrap_mode = 3
+
+[node name="TextureRect3" type="TextureRect" parent="readmepage" unique_id=536844261]
+layout_mode = 0
+offset_left = 382.0
+offset_top = 582.0
+offset_right = 422.0
+offset_bottom = 622.0
+texture = ExtResource("4_xg1py")
+
 [connection signal="pressed" from="level1btn" to="." method="_on_level_1_btn_pressed"]
 [connection signal="pressed" from="level2btn" to="." method="_on_level_2_btn_pressed"]
+[connection signal="pressed" from="readme" to="." method="_on_readme_pressed"]
+[connection signal="pressed" from="readmepage/readmemainmenu" to="." method="_on_readmemainmenu_pressed"]
+[connection signal="pressed" from="readmepage/readmemainmenu" to="." method="_on_readme_pressed"]
