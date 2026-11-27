@@ -1,5 +1,21 @@
 [gd_scene format=3 uid="uid://bm1ebwkanjpsx"]
 
+[ext_resource type="Script" uid="uid://cggittallmt6x" path="res://scenes/mainchar.gd" id="1_362dq"]
+[ext_resource type="Texture2D" uid="uid://basynvi646sub" path="res://assets or idk/pixil-frame-0(8).png" id="1_pk7x4"]
+[ext_resource type="PackedScene" uid="uid://cii7y3dotusvq" path="res://scenes/dbjumpparticle.tscn" id="2_8a6s8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pk7x4"]
+atlas = ExtResource("1_pk7x4")
+region = Rect2(27, 7, 22, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fm6ed"]
+atlas = ExtResource("1_pk7x4")
+region = Rect2(49, 7, 22, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ncv46"]
+atlas = ExtResource("1_pk7x4")
+region = Rect2(71, 7, 22, 18)
+
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vp5oh"]
 load_path = "res://.godot/imported/pixil-frame-0(1).png-91b69af21c601e7da5c4b8ca6a4463bb.ctex"
 
@@ -35,6 +51,20 @@ region = Rect2(3, 2, 22, 18)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fm6ed"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pk7x4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fm6ed")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ncv46")
+}],
+"loop": 1,
+"name": &"flip",
+"speed": 10.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_362dq")
@@ -74,15 +104,18 @@ size = Vector2(60.5, 72)
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=54317563]
 texture_filter = 1
+script = ExtResource("1_362dq")
+particle = ExtResource("2_8a6s8")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=600637338]
 texture_filter = 1
-position = Vector2(-35, -68)
+position = Vector2(-39, -68)
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_fm6ed")
-animation = &"idle"
+animation = &"flip"
 autoplay = "idle"
-frame_progress = 0.41506216
+frame = 1
+frame_progress = 0.62783396
 centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2030082229]

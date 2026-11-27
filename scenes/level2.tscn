@@ -1,14 +1,16 @@
 [gd_scene format=3 uid="uid://cjxqq53h3w8q0"]
 
-[ext_resource type="Texture2D" uid="uid://b37tk6116p6nu" path="res://assets or idk/Yellow.png" id="1_alqfr"]
 [ext_resource type="Texture2D" uid="uid://bs1duilmnnqup" path="res://assets or idk/Terrain (16x16).png" id="2_rmy57"]
 [ext_resource type="PackedScene" uid="uid://bm1ebwkanjpsx" path="res://scenes/mainchar.tscn" id="3_qulpo"]
 [ext_resource type="Script" uid="uid://cggittallmt6x" path="res://scenes/mainchar.gd" id="4_jifot"]
 [ext_resource type="PackedScene" uid="uid://sbbwvl4o6x40" path="res://scenes/collectible.tscn" id="5_3opl0"]
 [ext_resource type="Script" uid="uid://dc1n41pljjwk5" path="res://scenes/progress_holder.gd" id="6_dc5vx"]
 [ext_resource type="PackedScene" uid="uid://davl03qymwvpw" path="res://scenes/main-menu.tscn" id="6_hrcei"]
+[ext_resource type="Texture2D" uid="uid://t3wtxf67yh2r" path="res://assets or idk/MorningLayer6.png" id="7_8g4ke"]
 [ext_resource type="PackedScene" uid="uid://hdr3vbc3pbv1" path="res://scenes/finish.tscn" id="7_s8oj7"]
+[ext_resource type="Texture2D" uid="uid://cxd36s7hog8lv" path="res://assets or idk/MorningLayer4.png" id="8_56gwk"]
 [ext_resource type="Script" uid="uid://dhh43jtiuku6x" path="res://scenes/area_2d.gd" id="8_xa7n4"]
+[ext_resource type="Texture2D" uid="uid://bdrxqgook6o0" path="res://assets or idk/MorningLayer2.png" id="9_ve5ok"]
 [ext_resource type="Script" uid="uid://dmiu2ljtimq56" path="res://scenes/pause.gd" id="10_bo4dx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mycd"]
@@ -240,14 +242,6 @@ corner_radius_bottom_left = 25
 
 [node name="sceneobj" type="Node" parent="." unique_id=811639860]
 
-[node name="TextureRect" type="TextureRect" parent="sceneobj" unique_id=1755043134]
-texture_filter = 1
-offset_top = -702.0
-offset_right = 3570.0
-offset_bottom = 649.0
-texture = ExtResource("1_alqfr")
-stretch_mode = 1
-
 [node name="TileMap" type="TileMap" parent="sceneobj" unique_id=141357107]
 texture_filter = 1
 position = Vector2(0, -22)
@@ -337,6 +331,49 @@ position = Vector2(1048, -228)
 
 [node name="Area2D24" parent="sceneobj/collectibles" unique_id=306203450 instance=ExtResource("5_3opl0")]
 position = Vector2(1968, -134)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="sceneobj" unique_id=1831984614]
+offset = Vector2(0, -67)
+scale = Vector2(0.6, 0.6)
+transform = Transform2D(0.6, 0, 0, 0.6, 0, -67)
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="sceneobj/ParallaxBackground" unique_id=1693068026]
+motion_scale = Vector2(0, 1)
+motion_mirroring = Vector2(3200, 1800)
+
+[node name="Sprite2D" type="Sprite2D" parent="sceneobj/ParallaxBackground/ParallaxLayer" unique_id=1894960361]
+texture_filter = 1
+texture_repeat = 2
+texture = ExtResource("7_8g4ke")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 3200, 1800)
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="sceneobj/ParallaxBackground" unique_id=83951511]
+motion_scale = Vector2(0.4, 1)
+motion_mirroring = Vector2(3200, 1800)
+
+[node name="Sprite2D" type="Sprite2D" parent="sceneobj/ParallaxBackground/ParallaxLayer2" unique_id=74681104]
+texture_filter = 1
+texture_repeat = 2
+texture = ExtResource("8_56gwk")
+centered = false
+offset = Vector2(0, -400)
+region_enabled = true
+region_rect = Rect2(0, 0, 3200, 1800)
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="sceneobj/ParallaxBackground" unique_id=56946656]
+motion_scale = Vector2(0.8, 1)
+motion_mirroring = Vector2(3200, 1800)
+
+[node name="Sprite2D" type="Sprite2D" parent="sceneobj/ParallaxBackground/ParallaxLayer3" unique_id=1672137923]
+texture_filter = 1
+texture_repeat = 2
+texture = ExtResource("9_ve5ok")
+centered = false
+offset = Vector2(0, -400)
+region_enabled = true
+region_rect = Rect2(0, 0, 3200, 1800)
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1242282195]
 position = Vector2(1939.0001, 447)
